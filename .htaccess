@@ -24,6 +24,10 @@ RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
 RewriteCond %{REMOTE_ADDR} !^000\.000\.000\.000$ # INSERT IP TO IP LOCK WP-ADMIN LOG-IN PAGE
 RewriteRule ^(.*)$ - [R=403,L]
 
+RewriteCond %{REQUEST_URI} !^/wp-admin [NC]
+RewriteCond %{QUERY_STRING} author=\d
+RewriteRule ^ /? [L,R=301]
+
 RewriteCond %{HTTPS} off
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
