@@ -53,8 +53,8 @@ ExpiresByType application/javascript "access plus 1 year"
 </IfModule>
 
 # CORS
-Header set Access-Control-Allow-Origin "static.craigmanufacturing.com"
-Header set Access-Control-Allow-Origin "https://www-craigattachments-com.cdn.ampproject.org"
+Header set Access-Control-Allow-Origin "url1"
+Header set Access-Control-Allow-Origin "url2"
 
 
 # COMPRESS FILES
